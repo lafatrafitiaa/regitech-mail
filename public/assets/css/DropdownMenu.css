@@ -1,0 +1,38 @@
+#logo{
+	width:100%;
+	height:auto;
+	max-width: 15em;
+
+}
+.dropdown > a {
+  display: flex;
+  align-items: center;
+}
+.dropdown > a .icon {
+  margin-left: 0.25em;
+}
+
+.dropdown:hover .dropdown-nav {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-nav {
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.88, -0.72, 0, 1), opacity 0.3s ease-in-out;
+  transform: translateY(-4rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  background: rgba(75, 75, 75, 0.884);
+  width:200px;
+}
+.dropdown-nav a {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height:35px;
+  margin-left:15px;
+}

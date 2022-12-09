@@ -1,0 +1,181 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+	font-size:22px;
+	line-height: 32px;
+	/* color: #ffffff; */
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+  i#edit {
+    position: relative;
+    /* top: 20px; */
+    
+    border-radius: 50%;
+    font-size:22px;
+    height: 40px;
+    width: 40px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: cornflowerblue;
+    box-shadow: 0 0 6px 2px rgba(184, 184, 184, 0.808);
+  }
+  i#edit:hover{
+    box-shadow: 0 0 8px 3px #B8B8B8;
+  }
+  i#remove{
+    position: relative;
+    border-radius: 8%;
+    font-size:18px;
+    height: 40px;
+    width: 40px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: rgba(241, 135, 65, 0.966);
+    box-shadow: 0 0 6px 2px rgba(184, 184, 184, 0.808);
+  }
+  i#remove:hover{
+    box-shadow: 0 0 8px 3px #B8B8B8;
+  }
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
+}
+
+p {
+	text-align: center;
+}
+.topnav{
+  margin: 0 0;
+  position:relative;
+}
+
+nav {
+	margin: 50px 0;
+	/* background-color: #E64A19; */
+  background:rgba(0, 0, 0, 0.87); 
+ 
+}
+@media(max-width:820px){
+  nav{
+    width:100%;
+  }
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+  position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+  /* background-color: #E64A19; */
+  /* background:rgba(0, 0, 0, 0.87);  */
+	}
+ 
+nav a {
+	display:block;
+	padding:0 10px;	
+  color:#FFF;
+  font-size:18px;
+	line-height: 60px;
+	text-decoration:none;
+}
+ a::before{
+  color:white;
+  text-decoration:none;
+}
+nav a#active{
+  color:#e73131;
+}
+nav a:hover { 
+  /* background-color: #000000;  */
+  color:#e73131;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+  top: 60px; /* the height of the main nav */
+  margin-top:0px;
+
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:100%;
+	float:none;
+	display:list-item;
+  position: relative;
+z-index: 10;
+background:rgba(0, 0, 0, 0.87); 
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' '; }
+li > a:only-child:after { content: ''; }
+
+
+#tablemachine{
+  width:100;
+  height:auto;
+  position: relative;
+  display: table;
+}
+
+.menu:any-link{
+  color: #fff;
+}
+.menu:hover{
+  color:#e73131;
+}

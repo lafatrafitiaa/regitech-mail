@@ -1,0 +1,65 @@
+var colors = ["#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0","#775DD0",];
+                                                var array = [];
+                                                <?php if($statistiques != null){ ?>
+                                                    array = [0,0,0,0,0,0,0,0,5000,0,0,0];
+                                                <?php }else{ ?>
+                                                    for(var i=1; i<=12; i++){
+                                                        var a = 0;
+                                                        <?php foreach($produits as $produit){ ?>
+                                                            var mois = <?php echo $produit['mois']; ?>;
+                                                            if( i == mois ){
+                                                                a = <?php echo $produit['somme']; ?>;
+                                                                break;
+                                                            }
+                                                        <?php } ?>
+                                                        array.push(a);
+                                                    }
+                                                <?php } ?>
+                                                
+                                                var options = {
+                                                    chart: {
+                                                        height: 225,
+                                                        type: "bar",
+                                                        toolbar: {
+                                                            show: false
+                                                        },
+                                                        events: {
+                                                            click: function(chart, w, e) {
+                                                                console.log(chart, w, e);
+                                                            }
+                                                        }
+                                                    },
+                                                    colors: colors,
+                                                    plotOptions: {
+                                                        bar: {
+                                                            columnWidth: "45%",
+                                                            distributed: true
+                                                        }
+                                                    },
+                                                    dataLabels: {
+                                                        enabled: false
+                                                    },
+                                                    series: [
+                                                        {
+                                                            data: [200, 150, 500, 300, 350, 210, 340, 300];
+                                                        }
+                                                    ],
+                                                    xaxis: {
+                                                        categories: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Sept", "Oct", "Nov", "Déc"],
+                                                        labels: {
+                                                            style: {
+                                                            colors: colors,
+                                                            fontSize: "14px"
+                                                            }
+                                                        }
+                                                    },
+                                                    yaxis: {
+                                                        labels: {
+                                                            style: {
+                                                            color: "#9aa0ac"
+                                                            }
+                                                        }
+                                                    }
+                                                };
+                                                var chart = new ApexCharts(document.querySelector("#chart"), options);
+                                                chart.render();
